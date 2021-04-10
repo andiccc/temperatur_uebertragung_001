@@ -1,10 +1,10 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (id == 5) {
+    if (id == receivedNumber) {
         radio.sendString(CAR_1)
         basic.pause(1000)
         radio.sendNumber(temp)
     }
-    if (id == 6) {
+    if (id == receivedNumber) {
         radio.sendString(CAR_2)
         basic.pause(1000)
         radio.sendNumber(temp)
@@ -39,7 +39,7 @@ basic.forever(function () {
         id = 5
     }
     if (id == 5) {
-        radio.sendString(CAR_1)
+        radio.sendNumber(id)
     }
 })
 basic.forever(function () {
